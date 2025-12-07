@@ -65,5 +65,5 @@ EXPOSE 8080
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD python -c "import pymysql; pymysql.connect(host='38.207.179.164', user='tgbot_verify', password='mYC5yTpwAMcLm3iT', database='tgbot_verify').close()" || exit 1
 
-# 启动并发版bot
-CMD ["python", "-u", "bot_concurrent.py"]
+# 启动bot（主入口为 bot.py）
+CMD ["python", "-u", "bot.py"]

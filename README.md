@@ -24,6 +24,11 @@
 > **个人使用足够，商业使用请自行优化**  
 > 仅供学习交流使用，请勿用于非法用途
 
+## 🛠 更新提示
+
+- 修复 Docker 部署：镜像入口改为 `bot.py`，Compose 已自带 MySQL 服务并开放 `8080` 端口。
+- 常用命令配置：在 BotFather/`setMyCommands` 里默认只保留用户命令；管理员命令可通过 Telegram API 按 scope 配置（如群聊 `chat_member` 或私聊的 `chat` scope）以避免普通用户看到，权限仍由代码里的 `ADMIN_USER_ID` 校验。
+
 ---
 
 ## ✨ 项目简介
